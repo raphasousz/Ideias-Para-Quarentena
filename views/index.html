@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        
+        <!-- responsavel pelas configurações da pag -->
+        
+        <meta charset="utf-8">
+
+        <!-- Ligar o HTML com o CSS -->
+        <link rel="stylesheet" href="style.css">
+        
+<!--        Link para baixar as fontes do google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">  
+    </head>
+    
+    <body>
+        
+        <div id="container">
+            
+            <section id="intro">
+                
+                <header>
+                    <h1>Casa criativa</h1>
+
+                    <img src="Images/27pdZLL%20-%20Imgur.png" alt="Logo" title="Casa Criativa">
+                </header>
+                
+                <main>
+                    <p>
+                    Em tempos de quarentena para combater o tédio preparamos esse app.  
+                    </p>
+
+                    <p>
+                    Agora sempre que você tiver uma boa ideia pode jogar ela aqui.
+                    </p>
+
+                    <p>
+                    Juntos contea o corona.
+                    </p>
+                </main>
+                
+                <section id="button">
+<!--Podemos adicionar eventos em tag que quando ocorrem disparam uma funçao do js.-->
+                    <button onclick="onOff()">+ Adicionar ideia</button>
+                    <a href="/ideias" class="button">Ver ideia</a>
+                </section>
+               
+                <footer id="footer"><a href="https://rocketseat.com.br/" target="_blank">Com amor rockseat</a></footer>
+
+            </section>
+            
+
+            <section id="ideas">
+                {% include "all_ideas.html" %}
+
+            </section>
+            
+        </div>
+        
+        {% include "modal.html" %}
+        
+      
+       
+        <!--Ligando o HTML com o JS--> 
+      <script src="script.js"></script>
+        
+    </body>
+    
+</html>
